@@ -1,0 +1,40 @@
+.reviewsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviewItem {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reviewerName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.reviewItem p {
+  margin: 8px 0;
+  line-height: 1.4;
+  color: #555;
+}
+
+.reviewItem p:first-of-type {
+  margin-top: 0;
+}
+
+.reviewItem p:last-of-type {
+  margin-bottom: 0;
+}
+
+.span {
+  font-weight: 700;
+}

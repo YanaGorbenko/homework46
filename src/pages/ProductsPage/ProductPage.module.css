@@ -1,0 +1,20 @@
+.sortSelect {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: none; /* без анімацій */
+  margin-bottom: 10px;
+}
+
+.sortSelect:hover {
+  border-color: #007bff;
+}
+
+.sortSelect:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

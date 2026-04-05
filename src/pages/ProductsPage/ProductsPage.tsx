@@ -5,10 +5,17 @@ import { Error } from '../../components/Error/Error.tsx';
 import { ProductsList } from '../../components/ProductsList/ProductsList.tsx';
 import { useQuery } from '@tanstack/react-query';
 import css from './ProductPage.module.css';
+import { useEffect } from 'react';
 
 export const ProductsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const sortOrder = (searchParams.get('sort') || 'asc') as 'asc' | 'desc';
+
+  useEffect(() => {
+    if (!searchParams.has('sort')) {
+      setSearchParams({ sort: 'asc' }, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newOrder = event.target.value as 'asc' | 'desc';

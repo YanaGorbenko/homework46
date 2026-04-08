@@ -5,9 +5,13 @@ interface Props {
 }
 
 export const ProductReviews = ({ reviews }: Props) => {
+  if (!reviews || reviews.length === 0) {
+    return <p>Відгуків до цього продукту ще немає</p>;
+  }
+
   return (
     <>
-      {reviews ? (
+      {
         <ul className={css.reviewsList}>
           {reviews.map((review, index) => (
             <li key={index} className={css.reviewItem}>
@@ -29,9 +33,7 @@ export const ProductReviews = ({ reviews }: Props) => {
             </li>
           ))}
         </ul>
-      ) : (
-        <p>Відгуків до цього продукту ще немає</p>
-      )}
+      }
     </>
   );
 };
